@@ -13,8 +13,6 @@ import static org.junit.Assert.assertEquals;
 public class CatMockTest {
     @Mock
     Feline feline;
-    @Mock
-    Predator predator;
 
     @Test
     public void getSoundTest() {
@@ -22,6 +20,7 @@ public class CatMockTest {
         String expectedResult = "Мяу";
         assertEquals(expectedResult, cat.getSound());
     }
+
     @Test
     public void getFoodTest() throws Exception {
         Cat cat = new Cat(feline);

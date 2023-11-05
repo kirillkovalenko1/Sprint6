@@ -13,14 +13,10 @@ import static org.junit.Assert.assertEquals;
 @RunWith(MockitoJUnitRunner.Silent.class)
 public class FelineMockTest {
 
-    @Mock
-    Predator predator;
-
     @Test
     public void eatMeatTest() throws Exception {
         Feline feline = new Feline();
         List expectedResult = List.of("Животные", "Птицы", "Рыба");
-        Mockito.when(predator.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List actualResult = feline.eatMeat();
         assertEquals(expectedResult, actualResult);
 
